@@ -15,6 +15,7 @@ def main():
     for k in li:
         li_dict[k] += 1
     print(sorted(li_dict))
+    print(li_dict)
 
 
 if __name__ == "__main__":
