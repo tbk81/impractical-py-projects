@@ -9,14 +9,13 @@ from collections import defaultdict
 
 def main():
     sentence = "This is a sentence that needs a bar chart to display"
-    # li = [word.split() for word in sentence.split()]
     li = list(sentence.lower().replace(' ', ''))
     li_dict = defaultdict(int)
     for k in li:
         li_dict[k] += 1
-    print(sorted(li_dict))
-    print(li_dict)
-    print(li_dict["t"])
+
+    for k, v in sorted(li_dict.items()):
+        print(k, v*k)
 
 
 if __name__ == "__main__":
