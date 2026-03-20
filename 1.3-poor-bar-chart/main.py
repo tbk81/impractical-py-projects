@@ -16,6 +16,7 @@ def main():
         li_dict[k] += 1
     print(sorted(li_dict))
     print(li_dict)
+    print(li_dict["t"])
 
 
 if __name__ == "__main__":
