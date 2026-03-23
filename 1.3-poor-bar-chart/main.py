@@ -7,6 +7,7 @@ modules that I haven’t covered yet, pprint and collections/defaultdict.
 """
 from collections import defaultdict
 
+
 def main():
     sentence = "This is a sentence that needs a bar chart to display"
     li = list(sentence.lower().replace(' ', ''))
@@ -14,8 +15,8 @@ def main():
     for k in li:
         li_dict[k] += 1
 
-    for k, v in sorted(li_dict.items()):
-        print(k, v*k)
+    poor_dict = {k: v * k for k, v in sorted(li_dict.items())}
+    print(poor_dict)
 
 
 if __name__ == "__main__":
