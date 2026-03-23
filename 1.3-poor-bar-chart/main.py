@@ -6,7 +6,7 @@ type display. Hint: I used a dictionary data structure and two
 modules that I haven’t covered yet, pprint and collections/defaultdict.
 """
 from collections import defaultdict
-
+import pprint
 
 def main():
     sentence = "This is a sentence that needs a bar chart to display"
@@ -15,8 +15,8 @@ def main():
     for k in li:
         li_dict[k] += 1
 
-    poor_dict = {k: v * k for k, v in sorted(li_dict.items())}
-    print(poor_dict)
+    poor_dict = {k: v*k for k, v in sorted(li_dict.items())}
+    pprint.pp(poor_dict)
 
 
 if __name__ == "__main__":
