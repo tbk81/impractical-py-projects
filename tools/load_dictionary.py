@@ -1,5 +1,5 @@
 """
-Load a text file as a list.
+This will load a text file as a list.
 Arguments:
 -text file name (and directory path, if needed)
 Exceptions:
