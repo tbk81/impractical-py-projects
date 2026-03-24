@@ -8,9 +8,17 @@ def find_palingrams(dict_txt):
     pali_li = []
 
     for word in word_li:
-        if len(word) > 1:
-            for l in word:
-                print(l)
+        end = len(word)
+        rev_word = word[::-1]
+        if end > 1:
+            for l in range(end):
+                if word[l:] == rev_word[:end - l] and rev_word[end - l:] in word_li:
+                    pali_li.append((word, rev_word[end - l:]))
+                if word[:l] == rev_word[end - l:] and rev_word[:end - l] in word_li:
+                    pali_li.append((rev_word[:end - l], word))
+    return pali_li
 
 
-find_palingrams('2of12inf.txt')
+palingrams = find_palingrams('2of12inf.txt')
+print(f'There were {len(palingrams)} palindromes found')
+print(*palingrams, sep='\n')
