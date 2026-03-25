@@ -2,9 +2,9 @@
 
 from tools import load_dictionary
 
-def find_palingrams(dict_txt):
+word_li = load_dictionary.load('2of12inf.txt')
+def find_palingrams():
     """Find dictionary palingrams."""
-    word_li = load_dictionary.load(dict_txt)
     pali_li = []
 
     for word in word_li:
@@ -19,6 +19,6 @@ def find_palingrams(dict_txt):
     return pali_li
 
 
-palingrams = find_palingrams('2of12inf.txt')
+palingrams = find_palingrams()
 print(f'There were {len(palingrams)} palindromes found')
 print(*palingrams, sep='\n')
