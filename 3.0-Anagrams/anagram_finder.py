@@ -10,9 +10,19 @@ Append word to anagrams list
 Print anagrams list
 """
 from tools import load_dictionary
+
 word_li = load_dictionary.load("2of12inf.txt")
+words = set(word_li)
 
 def anagram_finder():
     anagram_li = []
     usr_word = input("Enter a word to find an anagram: ")
+    sort_usr_word = sorted(usr_word)
+    # print(usr_word)
+    for word in words:
+        if sort_usr_word == sorted(word):
+            anagram_li.append(word)
+    return anagram_li
 
+
+print(anagram_finder())
