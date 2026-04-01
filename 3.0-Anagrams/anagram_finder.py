@@ -6,8 +6,8 @@ Sort the user-word
 Loop through each word in the word list:
 Sort the word
 if word sorted is equal to user-word sorted:
-Append word to anagrams list
-Print anagrams list
+Append word to anagram list
+Print anagram list
 """
 from tools import load_dictionary
 

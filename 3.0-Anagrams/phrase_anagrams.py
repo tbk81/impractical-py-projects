@@ -25,4 +25,15 @@ from tools import load_dictionary
 from collections import Counter
 
 word_li = load_dictionary.load("2of12inf.txt")
+words = set(word_li)
+usr_input = input("Enter a word to search for anagrams: ")
+
+def anagram_phrase():
+    anagram_li = []
+    limit = len(usr_input)
+    usr_count = Counter(usr_input)
+    while len(usr_input) < limit:
+        for word in words:
+            if word != usr_input:
+                if
 
