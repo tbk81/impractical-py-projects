@@ -16,12 +16,13 @@ words = set(word_li)
 
 def anagram_finder():
     anagram_li = []
-    usr_word = input("Enter a word to find an anagram: ")
+    usr_word = input("Enter a word to find an anagram: ").lower()
     sort_usr_word = sorted(usr_word)
-    # print(usr_word)
     for word in words:
-        if sort_usr_word == sorted(word):
-            anagram_li.append(word)
+        word = word.lower()
+        if word != usr_word:
+            if sort_usr_word == sorted(word):
+                anagram_li.append(word)
     return anagram_li
 
 
