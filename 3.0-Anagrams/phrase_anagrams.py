@@ -24,4 +24,5 @@ Ask user to start over or to exit
 from tools import load_dictionary
 from collections import Counter
 
+word_li = load_dictionary.load("2of12inf.txt")
 
