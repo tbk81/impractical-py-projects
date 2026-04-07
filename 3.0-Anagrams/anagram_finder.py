@@ -39,4 +39,4 @@ def anagram_finder(name, word_li):
     print("Number of remaining (real word) anagrams = {}".format(len(anagrams)))
 
 
-# pprint(dict_file)
+
