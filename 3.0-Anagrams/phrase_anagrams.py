@@ -39,5 +39,5 @@ def anagram_phrase():
             if word != usr_input:
                 if sort_usr_word == sorted(word):
                     anagram_li.append(word)
-    return anagram_li
+        return anagram_li
 
